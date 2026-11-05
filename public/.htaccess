@@ -1,0 +1,4 @@
+# Allow the classroom site only on the local machine.
+Require local
+Options -Indexes
+

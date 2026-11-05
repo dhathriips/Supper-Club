@@ -1,0 +1,5 @@
+<?php heading('Private notebook','Tasting notes','Record a thought about a mock order. Only your classroom account can read and edit these notes.'); ?>
+<form class="panel formstack" method="post"><?=act('note-add')?><label>New note<textarea name="body" maxlength="600" rows="3" placeholder="How was your kitchen discovery?" required></textarea></label><button>Save note</button></form>
+<div class="sectionhead"><h2>Your notes</h2></div><?php $notes=feedback(); if(!$notes): ?><p class="muted">Your notebook is empty.</p><?php endif ?>
+<?php foreach($notes as $n): ?><article class="panel"><small><?=e($n['date'])?> IST</small><p class="note"><?=e($n['body'])?></p><details><summary>Edit note</summary><form method="post" class="formstack"><?=act('note-edit')?><input type="hidden" name="id" value="<?=e($n['id'])?>"><label>Revised note<textarea name="body" required maxlength="600"><?=e($n['body'])?></textarea></label><button>Save changes</button></form></details><form method="post"><?=act('note-delete')?><input type="hidden" name="id" value="<?=e($n['id'])?>"><button class="textbtn">Delete note</button></form></article><?php endforeach ?>
+

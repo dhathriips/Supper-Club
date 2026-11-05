@@ -1,0 +1,6 @@
+<?php heading('Classroom workbench','Interaction lab','Explore the mouse, keyboard and document events behind a restaurant interface.'); ?>
+<div class="split"><section class="panel"><p class="eyebrow">01 / Mouse & focus</p><h2>Kitchen tickets</h2><p>Hover, tap, or tab to a ticket to bring it forward. Move the pointer across the board to read its coordinates.</p>
+<div class="board" id="board"><button class="ticket a">Ticket 01<br><strong>Dosa</strong></button><button class="ticket b">Ticket 02<br><strong>Biryani</strong></button><button class="ticket c">Ticket 03<br><strong>Kulfi</strong></button></div><output id="coords">Client (—, —) · Screen (—, —)</output></section>
+<section class="panel"><p class="eyebrow">02 / Keyboard</p><h2>Contextual help</h2><button class="light" id="help" aria-controls="help-box" aria-expanded="false">? Show help</button><div class="notice" id="help-box" hidden><strong>Ticket controls</strong><ul><li>Mouse<ul><li>Hover to raise a ticket.</li><li>Move to update the coordinate display.</li></ul></li><li>Keyboard<ul><li>Tab to raise a ticket.</li><li>Escape closes this help box.</li></ul></li></ul></div>
+<p>Client coordinates start at the viewport. Screen coordinates start at the screen origin.</p><a href="?p=discover">Open a kitchen to try live dish filtering →</a></section></div>
+
